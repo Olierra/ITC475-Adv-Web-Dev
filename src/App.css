@@ -1,0 +1,331 @@
+@keyframes nav-hover {
+  from {
+    color: var(--main-text-color);
+    transform: translateY(0px);
+  }
+  to {
+    color: var(--hover-text-color);
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes card-hover {
+  from {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+  }
+  to {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-text-color);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Color Variables note: not compatible with IE*/
+:root {
+  --main-bg-color: #FFFFFF; /* White */
+  --secondary-bg-color: #000000; /* Black */
+  --highlight-color: #ADD8E6; /* Light Blue*/
+  --header-separator-color: #D3D3D3; /*>Light Grey*/
+
+  --main-text-color: #000000; /* Black */
+  --secondary-text-color: #FFFFFF; /* White*/
+  --hover-text-color: #FFA500; /* Orange */
+  --savings-color: #00AA00; /* Medium Green*/
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+header {
+  background-color: var(--highlight-color);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#WelcomeBar {
+  background-color: var(--header-separator-color);
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+#Welcome h1 {
+  padding: 0px;
+  margin-top: 0px;
+  padding-left: 10px;
+  font-size: 24px;
+  float: left;
+}
+
+#WelcomeTime {
+  float: right;
+  font-size: 24px;
+}
+
+#WelcomeTime img {
+  height: 24px;
+}
+
+#nav {
+  background-color: var(--secondary-bg-color);
+  width: 100%;
+}
+
+#nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+#nav li {
+  display: inline;
+}
+
+#nav li a {
+  display: inline-block;
+  color: var(--secondary-text-color);
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#nav li a:hover {
+  color: var(--hover-text-color);
+}
+
+body {
+  background-color: var(--main-bg-color);
+  width: 100%;
+}
+
+#intro {
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+  width: 100%;
+  padding-left: 10px;
+}
+
+#cards {
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+.card {
+  border: solid;
+  border-color: #D3D3D3; /* Light Grey */
+  margin: 5px;
+}
+
+/* Using three hovers for this feels like the wrong solution, but it's working atm...*/
+.card:hover {
+  animation: card-hover 1s forwards;
+}
+
+.card:hover > a {
+  animation: card-hover 1s forwards;
+}
+
+.card a:hover > p {
+  animation: card-hover 1s forwards;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card a:link {
+  color: var(--main-text-color);
+}
+
+.card img {
+  display: block;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  width: 92%;
+  height: 75%;
+}
+
+.card h1,p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cost {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.savings {
+  color: var(--savings-color);
+}
+
+.Activities {
+  display: inline-block;
+}
+
+footer {
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-text-color);
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+footer p {
+  padding-top: 5px;
+  padding-left: 50px;
+}
+
+footer a:link {
+  color: var(--secondary-text-color);
+}
+
+@media only screen and (min-width: 600px) {
+  #logo {
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+    width: 250px;
+  }
+  #WelcomeBar {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    width: 100%;
+  }
+  nav li a {
+    color: var(--main-text-color);
+    padding-top: 0em;
+  }
+
+  nav li a:hover {
+    color: var(--hover-text-color);
+    animation: nav-hover 0.5s forwards;
+  }
+
+  #intro {
+    width: 50%;
+  }
+
+  .card {
+    border: solid;
+    border-color: #D3D3D3; /* Light Grey */
+    width: 22%;
+    display: inline-block;
+    margin: 5px;
+    height: 400px;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .card img {
+    width: 85%;
+    height: 55%;
+  }
+
+  .card h1,p {
+    padding-left: 10;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+    .card {
+      border: solid;
+      border-color: #D3D3D3; /* Light Grey */
+      width: 20%;
+      display: inline-block;
+      margin: 5px;
+      height: 450px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .card img {
+      width: 90%;
+      height: 60%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .card {
+      border: solid;
+      border-color: #D3D3D3; /* Light Grey */
+      width: 20%;
+      display: inline-block;
+      margin: 5px;
+      height: 500px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .card img {
+      width: 90%;
+      height: 65%;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .card {
+      border: solid;
+      border-color: #D3D3D3; /* Light Grey */
+      width: 20%;
+      display: inline-block;
+      margin: 5px;
+      height: 550px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .card img {
+      width: 90%;
+      height: 70%;
+    }
+}
+
+@media only screen and (min-width: 2350px) {
+    .card {
+      border: solid;
+      border-color: #D3D3D3; /* Light Grey */
+      width: 24%;
+      display: inline-block;
+      margin: 5px;
+      height: 600px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .card img {
+      width: 95%;
+      height: 75%;
+    }
+}
+
+@media only screen and (min-height: 1000px) and (min-width: 600px) {
+  footer{
+    position: absolute;
+    bottom: 0;
+  }
+}
