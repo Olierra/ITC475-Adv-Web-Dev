@@ -1,3 +1,7 @@
+/*
+	We'll be building this later to ensure that even IE will look right.
+*/
+
 @keyframes nav-hover {
 	from {
 		color: var(--main-text-color);
@@ -172,10 +176,6 @@ body {
 
 .savings {
 	color: var(--savings-color);
-}
-
-.Activities {
-	display: inline-block;
 }
 
 footer {
