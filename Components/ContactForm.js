@@ -21,11 +21,6 @@ class ContactForm extends React.Component {
         this.setState({[name]: value});
     }
 
-    handleSubmit(event) {
-        //Will be built to handle transferring of form data to PHP page.
-    }
-
-
 }
 
 class Activities extends React.Component {
@@ -58,7 +53,7 @@ class Activities extends React.Component {
     activityList() {
         switch (this.state.destination) {
 
-            case 'maldives':
+            case 'Maldives':
                 return (
                     React.createElement("label", null,
                         React.createElement("input", {
@@ -110,7 +105,7 @@ class Activities extends React.Component {
 
                 break;
 
-            case 'zealand':
+            case 'New Zealand':
                 return (
                     React.createElement("label", null,
                         React.createElement("input", {
@@ -163,7 +158,7 @@ class Activities extends React.Component {
 
                 break;
 
-            case 'venice':
+            case 'Venice':
                 return (
                     React.createElement("label", null,
                         React.createElement("input", {
@@ -206,7 +201,7 @@ class Activities extends React.Component {
 
                 break;
 
-            case 'cancun':
+            case 'Cancun':
                 return (
                     React.createElement("label", null,
                         React.createElement("input", {
@@ -264,10 +259,10 @@ class Activities extends React.Component {
                 },
 
                     React.createElement("option", { value: "" }, "-- Please choose a destination --"),
-                    React.createElement("option", { value: "maldives" }, "Maldives, South Asia"),
-                    React.createElement("option", { value: "zealand" }, "New Zealand"),
-                    React.createElement("option", { value: "venice" }, "Venice, Italy"),
-                    React.createElement("option", { value: "cancun" }, "Cancun, Mexico")),
+                    React.createElement("option", { value: "Maldives" }, "Maldives, South Asia"),
+                    React.createElement("option", { value: "New Zealand" }, "New Zealand"),
+                    React.createElement("option", { value: "Venice" }, "Venice, Italy"),
+                    React.createElement("option", { value: "Cancun" }, "Cancun, Mexico")),
 
 
                 React.createElement("br", null),
@@ -281,7 +276,7 @@ class Activities extends React.Component {
 }
 
 ReactDOM.render(
-    React.createElement("form", {id: 'ContactForm', onSubmit: this.handleSubmit },
+    React.createElement("form", {id: 'ContactForm', method: 'post', action: 'formsubmit.php' },
         React.createElement('h3', null, "First Name"),
         React.createElement("input", {type: 'text', name: 'firstName', placeholder: 'First Name', required: true}), //First Name
         
