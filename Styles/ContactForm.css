@@ -1,0 +1,75 @@
+@keyframes button-hover {
+  from {
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+    transform: translateY(0px);
+  }
+  to {
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-bg-color);
+    transform: translateY(-2px);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Color Variables note: not compatible with IE*/
+:root {
+  --main-bg-color: #FFFFFF; /* White */
+  --secondary-bg-color: #000000; /* Black */
+  --highlight-color: #ADD8E6; /* Light Blue*/
+  --header-separator-color: #D3D3D3; /*>Light Grey*/
+
+  --main-text-color: #000000; /* Black */
+  --secondary-text-color: #FFFFFF; /* White*/
+  --hover-text-color: #FFA500; /* Orange */
+  --savings-color: #00AA00; /* Medium Green*/
+}
+
+/* Fields */
+#ContactForm input{
+    background-color: transparent; /* Remove background fill */
+    border-radius: 0; /* Remove corner curve */
+    border: 2px solid var(--header-separator-color); /* 2px Smoke border */
+    color: var(--main-text-color); /* Noir text */
+    height: 25px; /* Increase input height */
+    
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: var(--header-separator-color);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: var(--header-separator-color);
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: var(--header-separator-color);
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #D3D3D3;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:    #D3D3D3;
+}
+
+/* Button */
+.button {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  color: #020202;
+  background: #999999;
+  height: 30px;
+  width: 70px;
+}
+
+.button:hover {
+  animation: button-hover 1s forwards;
+}
