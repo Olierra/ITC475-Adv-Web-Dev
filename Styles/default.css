@@ -111,9 +111,17 @@ nav li a:hover {
 	color: var(--hover-text-color);
 }
 
-body {
+html, body {
 	background-color: var(--main-bg-color);
 	width: 100%;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto 7px;
 }
 
 #intro {
@@ -170,6 +178,10 @@ body {
 	padding-right: 20px;
 }
 
+.card li {
+	list-style-type: none; 
+}
+
 .savings {
 	color: var(--savings-color);
 }
@@ -184,6 +196,7 @@ footer {
 	width: 100%;
 	margin-bottom: 0;
 	padding-bottom: 0;
+	height: 72px;
 }
 
 footer p {
@@ -228,7 +241,58 @@ footer a:link {
 	.card {
 		border: solid;
 		border-color: #D3D3D3; /* Light Grey */
-		width: 22%;
+		width: 45%;
+		display: inline-block;
+		margin: 5px;
+		height: 400px;
+		vertical-align: top;
+		text-align: left;
+	}
+
+	.card img {
+		width: 85%;
+		height: 55%;
+	}
+
+	.card h1,p {
+		padding-left: 10;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	#logo {
+		display: block;
+		margin-left: 10px;
+		margin-right: auto;
+		width: 250px;
+	}
+	#WelcomeBar {
+		margin-bottom: 10px;
+	}
+
+	nav {
+		background-color: var(--main-bg-color);
+		color: var(--main-text-color);
+		width: 100%;
+	}
+	nav li a {
+		color: var(--main-text-color);
+		padding-top: 0em;
+	}
+
+	nav li a:hover {
+		color: var(--hover-text-color);
+		animation: nav-hover 0.5s forwards;
+	}
+
+	#intro {
+		width: 50%;
+	}
+
+	.card {
+		border: solid;
+		border-color: #D3D3D3; /* Light Grey */
+		width: 30%;
 		display: inline-block;
 		margin: 5px;
 		height: 400px;
@@ -250,7 +314,7 @@ footer a:link {
 		.card {
 			border: solid;
 			border-color: #D3D3D3; /* Light Grey */
-			width: 20%;
+			width: 23%;
 			display: inline-block;
 			margin: 5px;
 			height: 450px;
@@ -264,29 +328,11 @@ footer a:link {
 		}
 }
 
-@media only screen and (min-width: 1600px) {
-		.card {
-			border: solid;
-			border-color: #D3D3D3; /* Light Grey */
-			width: 20%;
-			display: inline-block;
-			margin: 5px;
-			height: 500px;
-			vertical-align: top;
-			text-align: left;
-		}
-
-		.card img {
-			width: 90%;
-			height: 65%;
-		}
-}
-
 @media only screen and (min-width: 2000px) {
 		.card {
 			border: solid;
 			border-color: #D3D3D3; /* Light Grey */
-			width: 20%;
+			width: 24%;
 			display: inline-block;
 			margin: 5px;
 			height: 550px;
@@ -316,11 +362,4 @@ footer a:link {
 			width: 95%;
 			height: 75%;
 		}
-}
-
-@media only screen and (min-height: 1000px) and (min-width: 600px) {
-	footer{
-		position: absolute;
-		bottom: 0;
-	}
 }
