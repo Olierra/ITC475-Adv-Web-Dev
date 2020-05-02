@@ -1,0 +1,106 @@
+﻿<!--
+    Chance Bailey
+    Missouri State University
+    ITC 475 Final Project
+-->
+<!--
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="Styles/default.css">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Olierra's Corner - Connect Four</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a class="home" href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="highscores.php">High Scores</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <article>
+            </article>
+            <main>
+                <h1>Connect Four</h1>
+                <h3 class="player-turn"></h3>
+                <div class="container">
+                    <button class="start" onclick="startGame()">New Game</button>
+                    <button class="rules" onclick="showRules()">Rules</button>
+                    <div class="rulesCard">
+                        <p>
+                            Take turns placing chips in one of the columns. You win when you place four chips of the same color in a row, column, or diagonal line. If you fill up the board with no four in a row, the game is a draw. Check out the high scores to see you've made the top ten!
+                        </p>
+                    </div>
+                    <table>
+                        <tr>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                        </tr>
+                        <tr>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                        </tr>
+                        <tr>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                        </tr>
+                        <tr>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                        </tr>
+                        <tr>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                        </tr>
+                        <tr>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                            <td class="slot"></td>
+                        </tr>
+                    </table>
+                    <div class="rematch">Rematch</div>
+                </div> <!--End of Container-->
+            </main>
+        </div> <!--End of Wrapper-->
+        <script src="Components/app.js"></script>
+    </body>
+</html>
